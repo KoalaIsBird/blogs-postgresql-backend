@@ -1,0 +1,119 @@
+### Add Blog
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVsZXBoYW50QGdtYWlsLmNvbSIsImlkIjoyLCJpYXQiOjE3NDc1OTY5Mzd9.MDPoWkARSdw3gqMf6tkS0_P7L62UtnmrPohsLIbAp8Q
+
+{
+    "url": "example.com",
+    "author": "Hello",
+    "title": "SQLite",
+    "likes": "1000",
+    "year": 2025
+    
+}
+
+### Get blogs
+GET http://localhost:3001/api/blogs
+
+### Delete blog
+DELETE http://localhost:3001/api/blogs/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYWxhaXNiaXJkQGdtYWlsLmNvbSIsImlkIjozLCJpYXQiOjE3NDY5NjYwNTl9.1dZ--qiWGCJlF7wpzCYBE5F14aQxKV2EiLIvEs74sUo
+
+### Change blog
+PUT http://localhost:3001/api/blogs/4
+Content-Type: application/json
+
+{
+    "likes": "6"
+}
+
+
+
+
+### Add user
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "koalaisbird@gmail.com",
+    "name": "Andrew"
+    
+}
+
+### Get users
+GET http://localhost:3001/api/users
+
+
+### Get user
+GET http://localhost:3001/api/users/1
+
+
+
+### Change user
+PUT http://localhost:3001/api/users/koalaisbird@gmail.com
+Content-Type: application/json
+
+{
+    "username": "koalaisbird@gmail.com"
+    
+}
+
+
+
+
+### Login
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "koalaisbird@gmail.com",
+    "password": "secret"
+    
+}
+
+###
+
+DELETE http://localhost:3001/api/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYWxhaXNiaXJkQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3NDc1OTQxOTd9.0tfM9eD04LC45NbLNTJzWpLINfY305BPT5uhSs00pWc
+
+### Get authors
+GET http://localhost:3001/api/authors
+
+
+### login
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "koalaisbird@gmail.com",
+    "password": "secret"
+    
+}
+
+
+### Add blog to user readingslist
+POST http://localhost:3001/api/readingslist
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "blogId": 3
+    
+}
+
+### Change read state in reading junction
+PUT http://localhost:3001/api/readingslist/1
+Content-Type: application/json
+
+{
+    "read": true
+    
+}
+
+
+# password: secret
+
+
+# fart@hi.com eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhcnRAaGkuY29tIiwiaWQiOjQsImlhdCI6MTc0Njk2NzQ4Mn0.VqMRuJu2GhzBnDKdQPdcnWKHHP43_nb-5s1ud9KGY2k
+
+#koalaisbird@gmail.com eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYWxhaXNiaXJkQGdtYWlsLmNvbSIsImlkIjozLCJpYXQiOjE3NDY5Njc0MzZ9.B1xySTA_sbYT_hmmRkSrQlH9LlubBOJ7sLvDh9boqAU
